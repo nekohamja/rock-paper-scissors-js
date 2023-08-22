@@ -1,30 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Rock Paper Scissors!</title>
-</head>
-<body>
-    <script src="script.js"></script>
-    <div class="container">
-        <h1 class="title">Rock Paper Scissors!</h1>
-        <div class="interface">
-            <div class="playerSelect">
-                <p>Select turn</p>
-                <div class="rock">Rock</div>
-                <div class="paper">Paper</div>
-                <div class="scissors">Scissors</div>
-            </div>
-            <div class="computer">
-                <p>Computer's turn</p>
-                <div class="computerTurn">??</div>
-            </div>
+  </head>
+  <body class="bg">
+    <div class="main">
+      <div class="container">
+        <div class="header">
+          <h1 class="title">Rock Paper Scissors!</h1>
+          <p class="notifier">Select your choice!</p>
         </div>
-        <button class="nextRound">start next round</button>
 
+        <div class="interface">
+          <div class="playerSelect">
+            <p class="playerPoints">You: 0</p>
+            <ul class="choices">
+              <li class="rock"></li>
+              <li class="paper"></li>
+              <li class="scissors"></li>
+            </ul>
+          </div>
+          <div class="computerSelect">
+            <p class="computerPoints">Opponent: 0</p>
+            <div class="choices">
+              <div class="computerTurn"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="scoreboard">
+          <p class="round">Round 1 /5</p>
+          <div class="newRound">Restart</div>
+          <div class="nextRound">Next Round</div>
+        </div>
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>

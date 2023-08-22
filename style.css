@@ -1,31 +1,206 @@
-body{
-    width: 60%;
-    margin: auto;
+body {
+  display: flex;
+  flex-direction: column;
+  height: 97vh;
+  gap: 12px;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+}
+p,
+h1,
+ul,
+li {
+  margin: 0;
+  text-decoration: none;
+  padding-left: 0;
+  list-style-type: none;
 }
 
-/* *{ border: 1px solid red;} */
-
-
-.container{
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    justify-content: space-between;
     text-align: center;
-}
-
-.interface{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
+    background-color: white;
+    padding: 42px 22px;
+    border-radius: 12px;
     gap: 22px;
+  }
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .notifier {
+    font-size: 18px;
+  }
+}
+
+.interface {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  .playerSelect,
+  .computerSelect {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 1;
+    gap: 12px;
+    .choices {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: stretch;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 48px;
+  .scoreboard {
+    display: flex;
+    width: 100%;
+    padding-left: 22px;
+    gap: 2px;
+    .round {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+    }
+    .newRound,
+    .nextRound {
+      background-color: rgb(232, 236, 243);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+      user-select: none;
+      transition: all 0.25s ease;
+    }
+    .newRound:active,
+    .nextRound:active {
+      background-color: rgb(211, 215, 223);
+    }
+    .newRound:hover,
+    .nextRound:hover {
+      box-shadow: inset rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+  }
+}
+
+/* icons */
 .rock,
 .paper,
-.scissors,
-.computerTurn{
-    width: 100px;
-    height: 100px;
-    background-color: blanchedalmond;
+.scissors {
+  width: 100px;
+  height: 100px;
+  transition: all 0.25s ease;
+}
+.computerTurn {
+  width: 100px;
+  height: 100px;
+}
+.rock {
+  background: transparent no-repeat center
+    url("https://twemoji.maxcdn.com/svg/270a.svg");
+  background-size: 75% 75%;
+}
+.paper {
+  background: transparent no-repeat center
+    url("https://twemoji.maxcdn.com/svg/270b.svg");
+  background-size: 90% 90%;
+}
+.scissors {
+  background: transparent no-repeat center
+    url("https://twemoji.maxcdn.com/svg/270c.svg");
+  background-size: 100% 100%;
+}
+.rock:hover,
+.paper:hover,
+.scissors:hover {
+  border-radius: 12px;
+  box-shadow: inset rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.computerTurn {
+  background: transparent no-repeat center
+    url(https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2753.svg);
+  background-size: 90% 90%;
+}
+
+/* bg gradient */
+.bg {
+  background: linear-gradient(270deg, #4839d4, #4e9cc5, #f67fba);
+  background-size: 600% 600%;
+
+  -webkit-animation: bg 8s ease infinite;
+  -moz-animation: bg 8s ease infinite;
+  -o-animation: bg 8s ease infinite;
+  animation: bg 8s ease infinite;
+}
+
+@-webkit-keyframes bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-o-keyframes bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes bg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
